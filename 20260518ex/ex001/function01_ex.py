@@ -44,3 +44,4 @@ matdongsanPrice()
 print('=' * 40)
 print(f'총 구매 금액: {totalPrice}')
 print('=' * 40)
+
