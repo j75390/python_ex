@@ -241,7 +241,6 @@ global 키워드는 함수 내에서 전역변수의 값을 '수정'하고자 �
 '99.종료'를 선택하면 프로그램 종료 시킨다.
 
 심심하면> 특정 회원의 회원ID와 회원PW를 입력받아 인증되면 회원 정보를 수정하는 기능을 구현해 보자!
-
 '''
 
 # signUp = 1
@@ -311,78 +310,78 @@ global 키워드는 함수 내에서 전역변수의 값을 '수정'하고자 �
 
 #  GUI_tkinter 사용 버전
 
-import tkinter as tk
-from tkinter import messagebox
+# import tkinter as tk
+# from tkinter import messagebox
 
-members = {}
+# members = {}
 
-def signup():
-    user_id = entry_id.get()
-    password = entry_pw.get()
-    email = entry_email.get()
-    phone = entry_phone.get()
+# def signup():
+#     user_id = entry_id.get()
+#     password = entry_pw.get()
+#     email = entry_email.get()
+#     phone = entry_phone.get()
 
-    if user_id in members:
-        messagebox.showerror("회원가입 실패", "이미 존재하는 아이디입니다.")
-    else:
-        members[user_id] = {
-            "password": password,
-            "email": email,
-            "phone": phone
-        }
-        messagebox.showinfo("회원가입 성공", f"{user_id}님 회원가입 완료!")
+#     if user_id in members:
+#         messagebox.showerror("회원가입 실패", "이미 존재하는 아이디입니다.")
+#     else:
+#         members[user_id] = {
+#             "password": password,
+#             "email": email,
+#             "phone": phone
+#         }
+#         messagebox.showinfo("회원가입 성공", f"{user_id}님 회원가입 완료!")
 
-def login():
-    user_id = entry_id.get()
-    password = entry_pw.get()
+# def login():
+#     user_id = entry_id.get()
+#     password = entry_pw.get()
 
-    if user_id in members and members[user_id]["password"] == password:
-        messagebox.showinfo("로그인 성공", f"{user_id}님 로그인 성공!")
-    else:
-        messagebox.showerror("로그인 실패", "아이디 또는 비밀번호가 틀렸습니다.")
+#     if user_id in members and members[user_id]["password"] == password:
+#         messagebox.showinfo("로그인 성공", f"{user_id}님 로그인 성공!")
+#     else:
+#         messagebox.showerror("로그인 실패", "아이디 또는 비밀번호가 틀렸습니다.")
 
-def show_user():
-    user_id = entry_id.get()
-    if user_id in members:
-        info = members[user_id]
-        messagebox.showinfo("회원 정보", f"아이디: {user_id}\n이메일: {info['email']}\n전화번호: {info['phone']}")
-    else:
-        messagebox.showwarning("조회 실패", "존재하지 않는 아이디입니다.")
+# def show_user():
+#     user_id = entry_id.get()
+#     if user_id in members:
+#         info = members[user_id]
+#         messagebox.showinfo("회원 정보", f"아이디: {user_id}\n이메일: {info['email']}\n전화번호: {info['phone']}")
+#     else:
+#         messagebox.showwarning("조회 실패", "존재하지 않는 아이디입니다.")
 
-def show_all():
-    if not members:
-        messagebox.showwarning("회원 없음", "등록된 회원이 없습니다.")
-    else:
-        all_info = ""
-        for uid, info in members.items():
-            all_info += f"아이디: {uid}, 이메일: {info['email']}, 전화번호: {info['phone']}\n"
-        messagebox.showinfo("모든 회원 정보", all_info)
+# def show_all():
+#     if not members:
+#         messagebox.showwarning("회원 없음", "등록된 회원이 없습니다.")
+#     else:
+#         all_info = ""
+#         for uid, info in members.items():
+#             all_info += f"아이디: {uid}, 이메일: {info['email']}, 전화번호: {info['phone']}\n"
+#         messagebox.showinfo("모든 회원 정보", all_info)
 
-# Tkinter 윈도우 생성
-root = tk.Tk()
-root.title("회원 관리 프로그램")
+# # Tkinter 윈도우 생성
+# root = tk.Tk()
+# root.title("회원 관리 프로그램")
 
-# 입력창
-tk.Label(root, text="아이디").grid(row=0, column=0)
-entry_id = tk.Entry(root)
-entry_id.grid(row=0, column=1)
+# # 입력창
+# tk.Label(root, text="아이디").grid(row=0, column=0)
+# entry_id = tk.Entry(root)
+# entry_id.grid(row=0, column=1)
 
-tk.Label(root, text="비밀번호").grid(row=1, column=0)
-entry_pw = tk.Entry(root, show="*")
-entry_pw.grid(row=1, column=1)
+# tk.Label(root, text="비밀번호").grid(row=1, column=0)
+# entry_pw = tk.Entry(root, show="*")
+# entry_pw.grid(row=1, column=1)
 
-tk.Label(root, text="이메일").grid(row=2, column=0)
-entry_email = tk.Entry(root)
-entry_email.grid(row=2, column=1)
+# tk.Label(root, text="이메일").grid(row=2, column=0)
+# entry_email = tk.Entry(root)
+# entry_email.grid(row=2, column=1)
 
-tk.Label(root, text="전화번호").grid(row=3, column=0)
-entry_phone = tk.Entry(root)
-entry_phone.grid(row=3, column=1)
+# tk.Label(root, text="전화번호").grid(row=3, column=0)
+# entry_phone = tk.Entry(root)
+# entry_phone.grid(row=3, column=1)
 
-# 버튼
-tk.Button(root, text="회원가입", command=signup).grid(row=4, column=0)
-tk.Button(root, text="로그인", command=login).grid(row=4, column=1)
-tk.Button(root, text="특정 회원 조회", command=show_user).grid(row=5, column=0)
-tk.Button(root, text="모든 회원 조회", command=show_all).grid(row=5, column=1)
+# # 버튼
+# tk.Button(root, text="회원가입", command=signup).grid(row=4, column=0)
+# tk.Button(root, text="로그인", command=login).grid(row=4, column=1)
+# tk.Button(root, text="특정 회원 조회", command=show_user).grid(row=5, column=0)
+# tk.Button(root, text="모든 회원 조회", command=show_all).grid(row=5, column=1)
 
-root.mainloop()
+# root.mainloop()
