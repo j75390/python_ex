@@ -2,8 +2,8 @@ import urllib.request
 import datetime
 import json
 
-client_id = 'ysQImDCHmzR_j_e2zlyS'
-client_secret = 'B2thlBKHRA'
+client_id = '-'
+client_secret = '-'
 
 # NAVER에서 데이터 가져오는 녀석
 def getRequestUrl(url):
