@@ -1,0 +1,7 @@
+import urllib.request
+import urllib.parse
+
+client_id = 'ysQImDCHmzR_j_e2zlyS'
+client_secret = 'B2thlBKHRA'
+
+urllib.parse.quote("날씨")
