@@ -1,0 +1,26 @@
+{
+    "saeri": {
+        "mId": "saeri",
+        "mPw": "1234",
+        "mMail": "saeri@gmail.com",
+        "mPhone": "010-5555-6666",
+        "mRegDate": "2026-06-01 14:09:45",
+        "mModDate": "2026-06-01 14:09:45"
+    },
+    "jjajjang": {
+        "mId": "jjajjang",
+        "mPw": "1234",
+        "mMail": "jjajjang@naver.com",
+        "mPhone": "010-7777-8888",
+        "mRegDate": "2026-06-01 14:25:22",
+        "mModDate": "2026-06-01 14:25:22"
+    },
+    "gildong": {
+        "mId": "gildong",
+        "mPw": "1234",
+        "mMail": "gildong@gmail.com",
+        "mPhone": "010-1234-5678",
+        "mRegDate": "2026-06-01 15:33:40",
+        "mModDate": "2026-06-01 15:33:40"
+    }
+}
