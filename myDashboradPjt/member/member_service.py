@@ -5,7 +5,7 @@ import os
 import json
 import session
 
-class MemberSerive:
+class MemberService:
     def __init__(self):
         self.members = {}
         self.init_database()
