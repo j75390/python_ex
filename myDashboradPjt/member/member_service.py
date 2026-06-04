@@ -152,5 +152,5 @@ class MemberService:
             return json.load(f)
 
 if __name__ == '__main__':
-    memberSerive = MemberSerive()
+    memberSerive = MemberService()
     memberSerive.run()

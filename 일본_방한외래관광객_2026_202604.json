@@ -1,0 +1,26 @@
+[
+    {
+        "nat_cd": "130",
+        "nat_name": "일본",
+        "visit_cnt": 225351,
+        "yyyymm": "202601"
+    },
+    {
+        "nat_cd": "130",
+        "nat_name": "일본",
+        "visit_cnt": 232835,
+        "yyyymm": "202602"
+    },
+    {
+        "nat_cd": "130",
+        "nat_name": "일본",
+        "visit_cnt": 481789,
+        "yyyymm": "202603"
+    },
+    {
+        "nat_cd": "130",
+        "nat_name": "일본",
+        "visit_cnt": 304053,
+        "yyyymm": "202604"
+    }
+]
